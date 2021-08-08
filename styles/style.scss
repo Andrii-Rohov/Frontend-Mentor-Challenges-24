@@ -1,0 +1,35 @@
+
+$FONT-Open-sans: 'Open Sans', sans-serif;
+$FONT-Raleway: 'Raleway', sans-serif;
+
+$Intro-Header-Background: hsl(217, 28%, 15%);
+$Main-background: hsl(218, 28%, 13%);
+$White: hsl(0, 0%, 100%);
+$Cyan: hsl(176, 68%, 64%);
+$Testimonials-background: hsl(219, 30%, 18%);
+
+@import "./partials/header-intro";
+@import "./partials/main-content";
+@import "./partials/footer-part";
+@import "./partials/media";
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    ::selection {
+        background-color: $Cyan;
+        color: black;
+    }
+    min-width: 375px;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    background-color: $Main-background; 
+    font-family: $FONT-Open-sans;
+    color: $White;
+   
+    
+}
+

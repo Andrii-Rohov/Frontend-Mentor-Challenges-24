@@ -1,0 +1,168 @@
+#capabilities-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: -28px;
+    #top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    #bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 90px;
+    }
+    .capabilities {
+        position: relative;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 80px 0 80px;
+       img {
+           position: absolute;
+           top: 0;
+       }
+        .capabilities-text {
+            text-align: center;
+            margin: 100px 0 0;
+            
+            h3 {
+                margin: 10px 0;
+                font-size: 1.4em;
+                font-family: $FONT-Raleway;
+                letter-spacing: 0.5px;
+            }
+            p {
+                margin: 0;
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+#inner-working {
+    display: flex;
+    flex-direction: row;
+    margin-top: 105px;
+    #stay-productive-image {
+        width: 43%;
+        padding: 0 0 0 7%;
+        img {
+            width: 100%;
+        }
+    }
+    #stay-productive-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h2 {
+            margin: 115px 0 0 55px;
+            font-family: $FONT-Raleway;
+            font-size: 3em;
+            width: 50%;
+        }
+        p {
+            margin: 20px 0 0 55px;
+            font-size: 1.15em;
+            width: 80%;
+        }
+        a {
+            margin: 25px 0 0 55px;
+            color: $Cyan;
+            transition: 250ms ease-in-out;
+            width: max-content;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-bottom: 1px solid $Cyan;
+            padding-bottom: 5px;
+            i {
+                transform:   translateX(0%);
+                font-size: 0.9em;
+
+            }
+            &:hover {
+                color: $White;
+                border-color: $White;
+                i {
+                    animation: round 750ms ease-in-out  infinite forwards;
+                    @keyframes round {
+                        0% {
+                            transform:   translateX(0%);
+                        }
+                        50% {
+                            transform:   translateX(60%);
+                        }
+                        100% {
+                            transform: translateX(0%) ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#testimonials {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 165px;
+    #quotes-image {
+        position: absolute;
+        top: -18%;
+        left: 9%;
+        z-index: -1;
+    }
+    .quotes {
+        display: flex;
+        flex-direction: column;
+        background-color: $Testimonials-background;
+        width: 25%;
+        max-width: 525px;
+        margin: 0 1.4%;
+        border-radius: 3px;
+        height: max-content;
+        box-shadow: 10px 15px 30px 0px rgba(255, 255, 255, 0.05);
+        p {
+            margin: 40px 25px 0px;
+            font-size: 1.05em;
+            line-height: 1.5em;
+            letter-spacing: 0.2px;
+        }
+        .person {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 10px 25px;
+            img{ 
+                width: 25px;
+                border-radius: 50%;
+                margin: 0 10px 0 0;
+                transition: 200ms ease-in-out;
+                &:hover {
+                    width: 50px;
+                }
+            }
+            h4 {
+                font-size: 0.75em;
+                letter-spacing: 0.5px;
+                span {
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

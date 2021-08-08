@@ -1,0 +1,130 @@
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 128px;
+    background-color: $Intro-Header-Background;
+    
+        #logo-image-wrapper {
+            margin-left: 80px;
+        }
+
+        #navbar-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 30%;
+        margin: 0px 50px 20px 0;
+            a {
+                position: relative;
+                font-family: $FONT-Raleway;
+                color: hsla(0, 0%, 100%, 0.8);
+                font-size: 1.1em;
+                text-decoration: none;
+                margin: 0 7% 0 7%;
+                min-width: max-content;
+                transition: 300ms cubic-bezier(0, 1.5, 1, 1.5);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                    width: 0%;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transition: 300ms cubic-bezier(0, 1.5, 1, 1.5);
+                }
+                &:hover, &:focus {
+                    color: $White;
+                    animation: scale 300ms cubic-bezier(0,1.5,1,1.5)  1 forwards;
+                        @keyframes scale {
+                            0% {
+                                transform:  scale(1);
+                            }
+                            50% {
+                                transform: scale(1.1);
+                            }
+                            100% {
+                                transform:  scale(1);
+                            }
+                        }
+                     &::after {
+                        bottom: -1px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                    }
+                }
+                &:active {
+                    color: rgba(255, 255, 255, 0.603);
+                    &::after {
+                        background-color: rgba(255, 255, 255, 0.603);
+                    }
+                }
+            }
+        }
+    
+    }
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 72px;
+    background-color: $Intro-Header-Background;
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    #intro-image-wrapper {
+        width: 50%;
+        margin: auto;
+        img {
+            width: 100%;
+        }
+    }
+    h1 {
+        font-family: $FONT-Raleway;
+        color: $White;
+        width: 60%;
+        text-align: center;
+        font-size: 2.86em;
+        line-height: 1.5em;
+        margin: 32px 0 0 0;
+    }
+    p {
+        font-family: $FONT-Open-sans;
+        color:  $White;
+        font-size: 1.43em;
+        width: 42%;
+        text-align: center;
+        margin: 33px 0 0 0;
+        line-height: 1.5em;
+    }
+    #intro-button {
+        width: 280px;
+        height: 55px;
+        background: linear-gradient(170deg, hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 50%);
+        background-size: 190%;
+        background-position: left;
+        border: none;
+        margin-top: 31px;
+        margin-bottom: 200px;
+        border-radius: 30px;
+        font-size: 1.2em;
+        font-weight: 700;
+        color: $White;
+        cursor: pointer;
+        transition: 300ms linear;
+        &:hover { 
+            background-size: 1000%;
+        }
+        &:active {
+            background-size: 1000%;
+            background-position: right;
+        }
+    }
+    } 

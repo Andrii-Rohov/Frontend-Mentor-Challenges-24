@@ -1,0 +1,246 @@
+#email-form-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    margin: auto;
+    margin-top: 200px;
+    background-color: $Intro-Header-Background;
+    border-radius: 7px;
+    max-width: 1000px;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.278);
+    h2 {
+        font-family: $FONT-Raleway;
+        font-size: 2.3em;
+        margin: 45px 0 0 0;
+    }
+    p {
+        text-align: center;
+        width: 75%;
+        margin: 21px 0 0 0;
+        line-height: 21px;
+    }
+    #email-form {
+        display: flex;
+        flex-direction: row;
+        margin: 38px 0 40px 0;
+        width: 100%;
+        justify-content: center;
+
+        #email-field {
+            outline: none;
+            width: 51%;
+            border-radius: 40px;
+            border: none;
+            padding-left: 40px;
+            max-height: 45px;
+            font-family: $FONT-Open-sans;
+        }
+
+        #email-form-button {
+            position: relative;
+            margin-left: 3%;
+            width: 23%;
+            height: 47px;
+            background: linear-gradient(170deg, hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 50%);
+            background-size: 190%;
+            background-position: left;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 700;
+            color: $White;
+            cursor: pointer;
+            transition: 300ms linear;
+            &:hover { 
+                background-size: 1000%;
+            }
+            &:active {
+                background-size: 1000%;
+                background-position: right;
+            }
+        }
+        #error-message {
+            position: absolute;
+            bottom: 23px;
+            left: 14%;
+            text-align: left;
+            width: auto;
+            margin: 0;
+            line-height: 1;
+            color: transparent;
+            
+            font-size: 0.7em;
+            visibility: hidden;
+            transition: 200ms linear;
+        }
+        .active {
+            color: hsl(0, 100%, 63%) !important;
+            visibility: visible !important;
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    background-color: hsl(216, 53%, 9%);
+    margin-top: -115px;
+    height: 515px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    #footer-logo-block {
+        width: 44%;
+        margin: 0px 0 150px 8.51%;
+    }
+    #communications {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0 0 0;
+
+        .comm-block {
+            position: relative;
+            
+            img {
+                position: absolute;
+                top: 5px;
+                left: 0;
+            }
+            p {
+                margin: 0;
+                margin-left: 37px;
+                width: 75%;
+                font-size: 1.15em;
+                line-height: 1.5em;
+            }
+        }
+        #phone-email {
+            .comm-block {
+                margin-bottom: 20px;
+                img {
+                    left: -10px;
+                }
+                p {
+                    margin: 0;
+                    margin-left: 0px;
+                    margin-left: 37px;
+                    width: 75%;
+                    font-size: 1em;
+                    line-height: 1.5em;
+                }
+            }
+        }
+    }
+    #footer-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 45%;
+        margin: 0 0 90px 0;
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+            margin-right: 7.92%;
+            a {
+                text-decoration: none;
+                color: $White;
+                font-size: 1.15em;
+                margin-bottom: 15px;
+                transition: 300ms cubic-bezier(0, 1.5, 1, 1.5);
+                 &:hover, &:focus {
+                    color: $White;
+                    font-weight: 700;
+                    animation: scale 300ms cubic-bezier(0,1.5,1,1.5)  1 forwards;
+                        @keyframes scale {
+                            0% {
+                                transform:  scale(1);
+                            }
+                            50% {
+                                transform: scale(1.1);
+                            }
+                            100% {
+                                transform:  scale(1);
+                            }
+                        }
+                    
+                    }
+            }
+        }
+        #links {
+            display: flex;
+            margin: 0px 6.16% 0 8.8%;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                text-decoration: none;
+                border: 1px solid #f6f6fe;
+                border-radius: 50%;
+                margin: 0 12px 0 0;
+                &:hover, &:focus {
+                    border-color: $Cyan;
+                    animation: scale 300ms cubic-bezier(0,1.5,1,1.5)  1 forwards;
+                        @keyframes scale {
+                            0% {
+                                transform:  scale(1);
+                            }
+                            50% {
+                                transform: scale(1.1);
+                            }
+                            100% {
+                                transform:  scale(1);
+                            }
+                        }
+                    .icon {
+                        color: $Cyan;
+                        animation: scale 300ms cubic-bezier(0,1.5,1,1.5)  1 forwards;
+                        @keyframes scale {
+                            0% {
+                                transform:  scale(1);
+                            }
+                            50% {
+                                transform: scale(1.1);
+                            }
+                            100% {
+                                transform:  scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+            .icon {
+                width: 15px;
+                text-align: center;
+                color: #f6f6fe;
+                transition: 300ms cubic-bezier(0, 1.5, 1, 1.5);
+            }
+        }
+    }
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        right: 25%;
+    
+        font-size: 1.3em;
+        text-align: center; 
+        a { 
+            color: $Cyan; 
+            text-decoration: none;
+            transition: 200ms ease-in-out;
+            &:hover, &:focus {
+                color: rgb(0, 102, 255);
+
+            }
+        }
+  
+    }
+}
